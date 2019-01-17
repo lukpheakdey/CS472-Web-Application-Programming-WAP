@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Tip Calculator Exercise </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/tip.css" type="text/css" rel="stylesheet"/>
+        <script>
+            function CalculateTip(){
+                var subtotal = document.getElementById("subtotal").value;
+                var per_tip = document.getElementById("per_tip").value;
+                var totalCal = parseFloat(subtotal) + (per_tip/100)*subtotal;
+                var totalLabel = document.getElementById("total");
+                totalLabel.innerHTML = totalCal;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+        <img src="images/calc.jpg" alt="Caculator">
+            Tip Calculator
+        </h1>
+        <div>
+            <label>
+                <input type="text" id="subtotal">
+                $ Subtotal
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="text" id="per_tip">
+                % Tip
+            </label>
+        </div>
+        <div>
+            <label>
+                <button id="btnCalulate" onclick="CalculateTip()">
+                    Calculate Tip
+                </button>
+            </label>
+        </div>
+        <hr>
+        <div>
+            <h2>Your total:</h2>
+            <p id="total"> $0.00 </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Module and Closure Lab</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var accountListInfo = [];
+            var newAccount = (function(){
+                        function Account(name, balance){
+                            this.name = name;
+                            this.balance = balance;
+                        }
+                        return {
+                            create: function (){
+                                var name = document.getElementById("account_name").value;
+                                var deposit = document.getElementById("deposit").value;
+                                var account = new Account(name, deposit);
+                                accountListInfo[accountListInfo.length] = account;
+                                
+                                document.getElementById("textarea_id").value +="Account name: " + account.name + " Balance: " + account.balance + "\n";
+                            }
+                        }
+                    }
+                )();
+        </script>
+    </head>
+    <body>
+        <label> Account Name: </label> <input type="text" id="account_name">
+        <br>
+        <label> Deposit: </label> <input type="text" id="deposit">
+        <br>
+        <input type="button" value="Create new account" id="btnCreate" onclick="newAccount.create();"/>
+        <br>
+        <textarea id="textarea_id" rows="6" cols="70"> </textarea>
+    </body>
+</html>

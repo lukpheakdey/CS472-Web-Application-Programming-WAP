@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  jQuery Quiz I  </title>
+    <link href="jQueryQuizI.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div id="content">
+        <h1 class="title">
+            jQuery Quiz I
+        </h1>
+
+        <p class="question">
+            1. In jQuery terminology, what is the difference between the “jQuery function” and the “jQuery object”?  </p>
+        <p class="answer">
+        Answer: -> 1. In jQuery terminology, what is the difference between the jQuery function and the jQuery object.<br>
+            - The dollar sign with the parentheses is the shorter name of the jQuery function. <br>
+            - This shortcut saves us from writing jQuery every time we want to call the jQuery function
+        </p> 
+        <hr>
+        <p class="question"> 2. Write jQuery code to find all h1 elements that are children of a div element and make their background color red. </p>
+        <pre>
+        <body>
+            <h1>abc</h1><br>
+            <div>
+                <h1>div-1</h1>
+                <h1>div-2</h1>
+            </div>
+            <h1>xyz</h1>
+        </body>
+        </pre>
+        <p class="answer"> 
+            <pre>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+                <script>
+                    $(document).ready(function(){
+                        $("div > h1").css("background-color","red");
+                    });
+                </script>
+            </pre>
+        </p>
+        <hr>
+
+        <p class="question">3. Use a jQuery method to insert the text "YES!" at the end of the <p> element. </p>
+        <pre>
+            <code>
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <script>
+                        <!—INSERT YOUR JQUERY CODE HERE - - >
+                        $(document).ready(function(){
+                            $("p").append("YES!");
+                        });
+                    </script>
+                </head>
+                <body>
+                    <p>Is jQuery FUN or what? </p>
+                </body>
+            </html>
+            </code>
+        </pre>
+        
+        <br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+body {
+	width: 100%;	
+	background-color: white;
+	font-family: "Arial", Arial; 
+	font-size: 14px;
+	margin: 0 auto;
+    padding: 0;
+}
+
+#content {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.title{
+	text-shadow: 1px 1px gray;
+}
+
+.question{
+    font-weight: bold;
+}

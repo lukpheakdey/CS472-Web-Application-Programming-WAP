@@ -1,0 +1,64 @@
+body{
+    background-color: white;
+    font-size: 12px;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#form_user{
+    font-size : 12px;
+    font-weight: bold;
+    background-color: transparent;
+    width: 45%;
+    float: left;
+}
+.warning{
+    color: red;
+    font-weight: normal;
+}
+
+.user_form{
+    background-color: #e0e0ff;
+    border-radius: 10px;
+}
+
+.user_fieldset{
+    background-color: white;
+    color: black;
+    border: 1px solid gray; 
+    font-size: 13px;
+    padding: 2px;
+    font-weight: normal;
+}
+
+.submit_button{
+    background-color: #ffaaaa;
+    color: black;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#content{
+    margin: 0 auto;
+    width: 1024px;
+}
+
+#bottom_page{
+    clear: both;
+    font-size: 10px;
+}
+
+.clear1{
+    clear: both;
+    padding: 5px;
+}
+
+a img {
+	border: none;
+}
+ul {
+	list-style-type: none;
+	padding-left: 0em;
+}
+ul li a img {
+	vertical-align: middle;
+}

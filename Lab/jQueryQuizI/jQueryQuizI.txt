@@ -1,0 +1,54 @@
+**************************
+***** jQuery Quiz I ******
+**************************
+
+1. In jQuery terminology, what is the difference between the jQuery function and the jQuery object? 
+
+Answer: -> 
+1. In jQuery terminology, what is the difference between the jQuery function and the jQuery object.
+- The dollar sign with the parentheses is the shorter name of the jQuery function. 
+- This shortcut saves us from writing jQuery every time we want to call the jQuery function
+
+ 
+                                --------------------------------
+
+
+2. Write jQuery code to find all h1 elements that are children of a div element and make their background color red.
+<body>
+    <h1>abc</h1><br>
+    <div>
+        <h1>div-1</h1>
+        <h1>div-2</h1>
+    </div>
+    <h1>xyz</h1>
+</body>
+
+Answer: -> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        $("div h1").css("background-color","red");
+    });
+</script>
+
+
+                                --------------------------------
+
+
+3. Use a jQuery method to insert the text "YES!" at the end of the <p> element.
+
+Answer: -> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            <!-- INSERT YOUR JQUERY CODE HERE -->
+            $(document).ready(function(){
+                $("p").append("YES!");
+            });
+        </script>
+    </head>
+    <body>
+        <p>Is jQuery FUN or what? </p>
+    </body>
+</html>

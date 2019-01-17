@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> SIGNUP </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/signup.css">
+</head>
+<body>
+    <div id="content">
+        <div>
+            <img src="images/nerdluv.png">
+        </div>
+        <br>
+        <div id="form">
+            <form action="" method="GET" id="form_user">
+                <fieldset class="user_form">
+                    <legend class="user_fieldset"> New User Signup:</legend>
+                    <table>
+                        <tr> 
+                            <td> <label> Name :</label> </td>
+                            <td> <input type="text" name="name"> </td>
+                        <tr>
+                        <tr> 
+                            <td> <label> Gender :</label> </td>
+                            <td> 
+                                <input type="radio" name="gender" value="male"> Male 
+                                <input type="radio" name="gender" value="female"> Female
+                            </td>
+                        <tr>
+                        <tr> 
+                            <td> <label> Age :</label> </td>
+                            <td> <input size="9" type="text" name="age"> </td>
+                        <tr>
+                        <tr> 
+                            <td> <label> Personality type :</label>  </td>
+                            <td> <input size="9" type="text" name="personality"> (<span class="warning"> Don't know your type?</span>)</td>
+                        <tr>
+                        <tr> 
+                            <td> <label> Favorite OS :</label> </td>
+                            <td> 
+                                <select name="os" >
+                                    <option value="widow" selected> Window</option>
+                                    <option value="macOS"> Mac OS</option>
+                                    <option value="ubuntu"> Ubuntu </option>
+                                </select>
+                            </td>
+                        <tr>
+                        <tr> 
+                            <td> <label> Seeking age :</label> </td>
+                            <td> 
+                                <input type="text" name="min" size="6" placeholder="min" maxlength="2"> 
+                                to
+                                <input type="text" name="max" size="6" placeholder="max" maxlength="2">
+                            </td>
+                        <tr>
+                        <tr> 
+                            <td colspan="2"> <input class="submit_button" type="submit" value="Sign Up"> </td>
+                        <tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+        <div class="clear1">
+            <p>
+                This page is for single nerds to meet and date each other! Type in your personal information and wait for the nerdly luv to begain! Thank
+            </p>
+        </div>
+        <hr>
+        <div id="bottom_page">
+            <p> Results and page (C) Copyright NerdLuv Inc. </p>
+            <ul>
+                <li>
+                    <a>
+                        <img src="images/back.gif" alt="Back"> 
+                        Back to to front page
+                    </a>
+                </li>
+            </ul>
+            <a href="http://validator.w3.org/check/referer">
+                <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png"
+                alt="html validator"/>
+            </a>
+    
+            <a href="http://validator.w3.org/check/referer">
+                <img src="http://mumstudents.org/cs472/2014-09/images/w3c-css.png"
+                alt="css validator"/>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+
+<?php include("bottom.html"); ?>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Rudy Timer </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var rudyTimer = (function(){
+                        var timer = null;
+                        if(timer === null){
+                            setInterval(rudyTimer(), 1000);
+                        }else{
+                            clearInterval(timer);
+                            timer = null;
+                        }
+                    }
+                )();
+            function rudyTimer(){
+                document.getElementById("result").innerHTML += "Rudy!";
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="rudyTimer();"> Click me! </button>
+        <br> 
+        <div id="result"> </div>
+    </body>
+</html>

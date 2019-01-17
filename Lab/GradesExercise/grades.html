@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Grades Exercies </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/grades.css">
+</head>
+<body>
+    <div id="banner">
+        <div id="banner_logo">
+            <img class="center1" src="images/mum_logo.jpg" width="100" height="100">
+            Maharishi University of Management
+        </div>
+    </div>   
+    <br>
+    <div id="content">
+        <div id="form">
+            <form action="http://mumstudents.org/params.php" method="POST">
+                <fieldset class="user_form">
+                    <legend class="user_fieldset"> RETRIEVE YOUR GRADE:</legend>
+                    <br>
+                    <label class="column"> Name: </label>
+                    <input type="text" name="name">
+
+                    <label class="column">Student ID: </label>
+                    <input type="text" name="id">
+                    <div class="clear5"></div>
+
+                    <label class="column">Entry: </label>
+                    <input type="radio" name="entry" value="Januray 2018"> Jan2018
+                    <input type="radio" name="entry" value="April 2018"> April2018
+                    <input type="radio" name="entry" value="August 2019" checked> August2018
+                    <div class="clear5"></div>
+
+                    <label> Assingment:</label>
+                    <select name="assingment">
+                        <option selected> Home Page Lab</option>
+                        <option> About Me Lab</option>
+                        <option> Homework 1 : Recipe</option>
+                        <option> Homework 2 : Review Moive</option>
+                        <option> Homework 4 : NerdLuv </option>
+                    </select>
+
+                    <div class="clear5"></div>
+                    <div id="center5">
+                        <input type="submit" value="Get Grades">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div id="bottom_page">
+        <p id="developed"> <i> Developed By: Pheakdey Luk </i></p>
+        <a href="http://validator.w3.org/check/referer">
+            <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png"
+            alt="html validator"/>
+        </a>
+
+        <a href="http://validator.w3.org/check/referer">
+            <img src="http://mumstudents.org/cs472/2014-09/images/w3c-css.png"
+            alt="css validator"/>
+        </a>
+    </div>
+</body>
+</html>

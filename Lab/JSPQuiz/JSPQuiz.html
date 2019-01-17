@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSP Introduction Quiz</title>
+    <link href="JSPQuiz.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="content">
+        <h1 class="title">JSP Introduction Quiz</h1>
+
+        <p class="question">
+            Question 1: What is the main value of Java Server Pages?
+        </p>
+        <p>
+            Answer: JSP separates display from processing, i.e., separate html from java. JSP is html with a little java mixed
+            in.
+        </p>
+
+        <p class="question">
+            Question 2: How are JSP pages related to servlets?
+        </p>
+        <p>
+            Answer: Server converts the JSP into a servlet class that implements the javax.servlet.jsp.JspPage interface. The
+            JSP
+            file is
+            compiled only when the page is first requested, or when the JSP file has been updated and has a more recent
+            timestamp.
+        </p>
+
+        <p class="question">
+            Question 3: How are JSP pages related to HTML?
+        </p>
+        <p>
+            Answer: JSP already contains HTML which means JSP allows us to include HTML.
+        </p>
+
+        <p class="question">
+            Question 4: Give an example of a JSP scriptlet and show how it will look in the JSP servlet .
+
+        </p>
+        <p>
+            Answer: <% int value = 10; %><br>
+            It will be considered as local variable in the service method.
+        </p>
+
+        <p class="question">
+            Question 5. Give an example of a JSP declaration and show how it will look in the JSP servlet.
+
+        </p>
+        <p>
+            Anser: <%! int value = 10; %><br>
+            It will be considered as globel variable in the class.
+        </p>
+
+        <p class="question">
+            Question 6. Give an example of a JSP comment and show how it will look in the JSP servlet.
+
+        </p>
+        <p>
+            Answer : <%-- write Comment here --%>
+        </p>
+
+        <p class="question">
+            Question 7. Give an example of a JSP expression and show how it will look in the JSP servlet.
+        </p>
+        <p>
+            Answer : <%= count++ %>
+        </p>
+
+        <p class="question">
+            Question 8. Give an example of a JSP directive and show how it will look in the JSP servlet.
+        </p>
+        <p>
+            Answer : <%@page import="java.util.*" %>
+        </p>
+
+        <p class="question">
+            Question 9. Explain how an EL expression is evaluated.
+        </p>
+        <p>
+            Answer : The JSP implementation evaluates the EL expression, converts it, and passes the returned value to the tag
+            handler.<br>
+            ${something} - container evaluates this as follows<br>
+            It will check in the all the scope respectively page, request, session, application. If it does not found it will be
+            ignored.
+        </p>
+
+        <p class="question">Question 10. Explain how servlet attributes are involved in EL expressions</p>
+        <p>
+            Answer: There is four types of scopes. EL expressions are invloed in four scope.<br>
+            1- Page Scope.<br>
+            2- Request Scope.<br>
+            3- Session Scope.<br>
+            4- Application Context Scope.
+        </p>
+
+        <p class="question">
+            Question 11: Explain how servlets and JSPs use request dispatch to interact.
+        </p>
+        <p>
+            Answer: We use dispatch to send data as request and response to other jsp.
+        </p>
+    </div>
+</body>
+</html>

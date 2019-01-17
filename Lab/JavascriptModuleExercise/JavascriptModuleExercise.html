@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  Javascript Module Exercise </title>
+    <link href="JavascriptModuleExercise.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div id="content">
+        <h1 class="title">
+            Javascript Module Exercise
+        </h1>
+
+        <p class="question">
+            1. What is the difference between the following 2 statements? </p>
+            <pre>
+                x = 1;
+                var a = 5;
+                var b = 10;
+                var c = function(a, b, c) {
+                            document.write(x);
+                            document.write(a);
+                            var f = function(a, b, c) {
+                                b = a;
+                                document.write(b);
+                                b = c;
+                                var x = 5;
+                            }
+                        f(a,b,c);
+                        document.write(b);
+                        var x = 10;
+                    }
+                    c(8,9,10);
+                    document.write(b);
+                    document.write(x);
+                }
+            </pre>
+       
+        <p class="answer">Answer: -> undefined889101</p> 
+        <hr>
+        <p class="question"> 2. Define Global Scope and Local Scope in Javascript.</p>
+        <p class="answer"> 
+            <strong> Global Scope: </strong> A variable declared outside a function, becomes GLOBAL.
+                A global variable has global scope: All scripts and functions on a web page can access it. 
+            <br><br>   
+            <strong> Local Scope: </strong> Variables declared within a JavaScript function, become LOCAL to the function.
+                Local variables have local scope: They can only be accessed within the function.
+                Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
+                Local variables are created when a function starts, and deleted when the function is completed.
+        </p>
+        <hr>
+
+        <p class="question">3. Consider the following structure of Javascript code: </p>
+        <pre>
+            // Scope A
+            function XFunc () {
+                // Scope B
+                function YFunc () {
+                    // Scope C
+                };
+            };
+        </pre>
+        <p class="answer">
+            (a) Do statements in Scope A have access to variables defined in Scope B and C? <br>
+            <strong> Answer: -> No </strong> <br>
+            (b) Do statements in Scope B have access to variables defined in Scope A? <br>
+            <strong> Answer: -> Yes </strong> <br>
+            (c) Do statements in Scope B have access to variables defined in Scope C? <br>
+            <strong> Answer: -> No </strong> <br>
+            (d) Do statements in Scope C have access to variables defined in Scope A? <br>
+            <strong> Answer: -> Yes </strong> <br>
+            (e) Do statements in Scope C have access to variables defined in Scope B? <br>
+            <strong> Answer: -> Yes </strong> <br>
+        </p> 
+        <hr>
+
+        <p class="question">4. What will be printed by the following (answer without running it)? </p>
+        <pre>
+            var x = 9;
+            function myFunction() {
+                return x * x;
+            }
+            document.write(myFunction());
+            x = 5;
+            document.write(myFunction());
+        </pre>
+        <p class="answer">
+            document.write(myFunction()); -> Result : 81 <br>
+            document.write(myFunction()); -> Result : 25
+        </p>
+        <hr>
+
+        <p class="question">5.What will the alert print out? (Answer without running the code. Remember ‘hoisting’.)? </p>
+        <pre>
+            var foo = 1;
+            function bar() {
+                if (!foo) {
+                    var foo = 10;
+                }
+                alert(foo);
+            }
+            bar();
+        </pre>
+        <p class="answer">Answer: -> 10 </p>
+        <hr>
+
+        <p class="question">6. Consider the following definition of an add( ) function to increment a counter variable: </p>
+        <pre>
+            var add = (function () {
+                var counter = 0;
+                return function () {
+                    return counter += 1;
+                }
+            })();
+        </pre>
+        <p class="question"> Modify the above module to define a count object with two methods: add( ) and reset( ). The count.add( ) method
+                adds one to the counter (as above). The count.reset( ) method sets the counter to 0.</p>
+        <p class="answer">Answer: -> </p> 
+        <pre>
+            var add = (function () {
+                var counter = 0;
+                return function () {
+                    add: function(){
+                        return counter++;
+                    }.
+                    reset: function(){
+                        return counter = 0;
+                    }
+                }
+            })();
+        </pre>
+        <hr>
+
+        <p class="question">7. In the definition of add( ) shown in question 6, identify the "free" variable. In the context of a function closure, what is a "free" variable?</p>
+        <p class="answer">Answer: -> Free variable is "counter". Free variable is the variable that a function can access from outer scope and not passed to it as a parameter</p> 
+        <hr>
+
+        <p class="question">8. The add( ) function defined in question 6 always adds 1 to the counter each time it is called. Write a definition of a function make_adder(inc), whose return value is an add function with increment value inc (instead of 1). Here is an example of using this function: </p>
+        <pre>
+            add5 = make_adder(5);
+            add5( ); add5( ); add5( ); // final counter value is 15
+            add7 = make_adder(7);
+            add7( ); add7( ); add7( ); // final counter value is 21
+        </pre>
+        <p class="answer">Answer: -> 
+            <pre>
+                var make_adder = function(inc) {
+                    var counter = 0;
+                    return function () {
+                        return counter += inc;
+                    }
+                };
+
+                var add5 = make_adder(5);
+                add5();
+                add5();
+                add5();
+            </pre>
+        </p> 
+        <hr>
+
+        <p class="question">9. Suppose you are given a file of Javascript code containing a list of many function and variable declarations. 
+                All of these function and variable names will be added to the Global Javascript namespace. What simple modification to the Javascript file can remove all the names from the Global namespace? </p>
+        <p class="answer">Answer: -> se Module pattern </p> 
+        <hr>
+
+        <p class="question">10. Using the Revealing Module Pattern, write a Javascript definition of a Module that creates an Employee Object with the following fields and methods:
+                <br>Private Field: name
+                <br>Private Field: age
+                <br>Private Field: salary
+                <br>Public Method: setAge(newAge)
+                <br>Public Method: setSalary(newSalary)
+                <br>Public Method: setName(newName)
+                <br>Private Method: getAge( )
+                <br>Private Method: getSalary( )
+                <br>Private Method: getName( )
+                <br>Public Method: increaseSalary(percentage) // uses private getSalary( )
+                <br>Public Method: incrementAge( ) // uses private getAge( ) 
+        </p>
+        <p class="answer">Answer: -> 
+            <pre>
+                var employee = (function(){
+                    var name;
+                    var age;
+                    var salary;
+                    
+                    var setAge = function (newAge){
+                        age = newAge;
+                    }
+
+                    var setSalary = function (newSalary){
+                        salary = newSalary;
+                    }
+
+                    var setName = function(newName){
+                        name = newName;
+                    }
+
+                    var getAge = function(){
+                        return age;
+                    }
+                    
+                    var getSalary = function(){
+                        return salary;
+                    }
+
+                    var getName = function(){
+                        return name;
+                    }
+
+                    var increaseSalary = function(percentage){
+                        return getSalary() * ( 1 + percentage/100);
+                    }
+
+                    var increamentAge = function(){
+                        return getAge() + 1;
+                    }
+
+                    return {
+                        setAge: setAge,
+                        setSalary: setSalary,
+                        setName: setName,
+                        increaseSalary: increaseSalary,
+                        incrementAge: incrementAge 
+                    };
+                })();
+            </pre>
+        </p> 
+        <hr>
+
+        <p class="question">11. Rewrite your answer to Question 10 using the Anonymous Object Literal Return Pattern. </p>
+        <p class="answer">Answer: -> 
+            <pre>
+                var employee = (function () {
+                    var name;
+                    var age;
+                    var salary;
+
+                    var getAge = function () {
+                        return age;
+                    };
+
+                    var getSalary = function () {
+                        return salary;
+                    };
+
+                    return {
+                        setAge: function (newAge) {
+                            age = newAge;
+                        },
+                        setSalary: function (newSalary) {
+                            salary = newSalary;
+                        },
+                        setName: function (newName) {
+                            name = newName;
+                        },
+                        increaseSalary: function (percentage) {
+                            return getSalary() * (1 + precentage/100);
+                        },
+                        incrementAge: function () {
+                            return getAge() + 1;
+                        }
+                    };
+                })();
+            </pre>
+        </p>
+        <hr>
+
+        <p class="question">12. Rewrite your answer to Question 10 using the Stacked Locally Scoped Object Literal Pattern </p>
+        <p class="answer">Answer: -> 
+            <pre>
+                var employee = (function () {
+                    var name;
+                    var age;
+                    var salary;
+
+                    var getAge = function () {
+                        return age;
+                    };
+
+                    var getSalary = function () {
+                        return salary;
+                    };
+
+                    var myObject= {
+                        setAge: function (newAge) {
+                            age = newAge;
+                        },
+
+                        setSalary: function (newSalary) {
+                            salary = newSalary;
+                        },
+
+                        setName: function (newName) {
+                            name = newName;
+                        },
+
+                        increaseSalary: function (percentage) {
+                            return getSalary() * (1 + precentage/100);
+                        },
+
+                        incrementAge: function () {
+                            return getAge() + 1;
+                        }
+                    };
+                    return myObject;
+                })();
+            </pre>
+        </p>
+        <hr>
+        <p class="question"> 13. Write a few Javascript instructions to extend the Module of Question 10 to have a public address field and public methods setAddress(newAddress) and getAddress( ).</p>
+        <p class="answer">Answer: -> 
+            <pre>
+                employee.address;
+
+                employee.setAddress = function(newAddress){
+                    return address = newAddress;
+                };
+
+                employee.getAddress = function(){
+                    return address;
+                }
+            </pre>
+        </p>
+        <hr>
+
+        <p class="question"> 14. What is the output of the following code?</p>
+        <pre>
+            const promise = new Promise((resolve, reject) => {
+                reject(“Hattori”);
+            });
+
+            promise.then(val => alert(“Success: “ + val)).catch(e => alert(“Error: “ + e));
+        </pre>
+        <p class="answer">Answer: -> Error: Hattori
+          
+        </p>
+        <hr>
+
+        <p class="question"> 15.  What is the output of the following code?</p>
+        <pre>
+            const promise = new Promise((resolve, reject) => {
+                reject(“Hattori”);
+                setTimeout(()=> reject(“Yoshi”), 500);
+            });
+            promise.then(val => alert(“Success: “ + val)).catch(e => alert(“Error: “ + e));
+        </pre>
+        <p class="answer">Answer: ->    <br>
+                                        Error: Hattori <br>
+                                        Error: Yoshi 
+            
+        </p>
+        <br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+body {
+	width: 100%;	
+	background-color: #595647;
+	font-family: "Arial", Arial; 
+	font-size: 12px;
+}
+
+
+h1{
+	font-size: 32px;
+	color: #99c4f9;
+}
+h3{
+	color: #99c4f9;
+	font-size: 18px;
+}
+
+p{
+	color: white;
+	font-size: 12px;
+}
+.first::first-letter {
+	color: whitesmoke;
+	font-size: 18px;
+}
+a{
+	color: brown;
+	font-size: 12px;
+}
+li{
+	color: white;
+}
+
+td.white {
+	color:white;
+}
+
+ol{
+	font-size: 12px;
+}
+b{
+	color: #e3e57f;
+}
+
+a:link {
+	color: #FF00FF;
+	text-decoration: none;
+}
+
+#movies_list {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+#movies_list li {
+    flex: 0 0 auto;
+}
+
+dl {
+    font-size: 11px;
+}
+dl > dt {
+    color: #ddd964;
+}
+

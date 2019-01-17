@@ -1,0 +1,73 @@
+
+									**************************
+									***** jQuery Quiz II *****
+									**************************
+
+1. Which, if any, of the following 3 code fragments are equivalent? Explain why they are different, 
+if they are. Explain why they can have different parameters and be equivalent, if they are equivalent.
+
+//code fragment 1
+$("li").each(function(idx, e) {
+    $(e).css("color", "yellow"); 
+});
+
+//code fragment 2
+$("li").each(function() {
+    $(this).css("color", "yellow"); 
+});
+
+//code fragment 3
+$("li").each(function(idx) {
+    $(this).css("color", "yellow"); 
+});
+
+Answer -> 
+They are same: 
+- For fragment 1, the parameters are the index and current DOM object "e".
+- For the fragment 2, $(this) is equivalent to the current DOM object, like "e" in fragment 1. 
+- For the fragment 3, $(this) is equivalent to the current DOM object, like "e" in fragment 1. But "idx" is not used.
+
+                                                --------------------------------
+
+2. Write a jQuery expression to find all divs on a page that include an unordered list in them, and make their text color be blue.
+
+Answer ->
+
+<body>
+	<div>no ul here </div>
+	<div>
+		This does contain a ul.
+		<ul>
+			<li>the first item</li>
+			<li>the second item</li>
+		</ul>
+	</div>
+	<script>
+		<!-- INSERT YOUR JQUERY CODE HERE -->
+		$(document).ready(function () {
+		    $("div").has("ul").css("background-color", "blue");
+		});
+	</script>
+</body>
+
+                                                --------------------------------
+
+3. Write jQuery code to append the following div element (and all of its contents) dynamically to the body element.
+
+Answer ->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS Bin</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function(){
+        $('body').append('<div><h1>JQuery Core</h1></div>');
+    });
+</script>
+</body>
+</html>

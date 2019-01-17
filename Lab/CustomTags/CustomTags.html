@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Tags</title>
+    <link href="CustomTags.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="content">
+        <h1 class="title">
+            Custom Tags Quiz
+        </h1>
+        <p class="question"> Question 1. Rewrite the JSP page in the first demo (forEach) to use scripting instead of the JSTL forEach.</p>
+
+        <p>
+            Answer: <% for(int i=0;i$lt;temperatures.length ;i++) {%>
+                <br>
+                <%= temperatures[i][0]%>
+                <br>
+                <td><%= temperatures[i][1]%>
+                <br>
+                <%= temperatures[i][2]%>
+                <br>
+            <%}%>
+        </p>
+
+        <p class="question">Question 2: How do custom tags relate to JSTL?</p>
+        <p>
+            JSTL is a standard library of JSP actions, but JSP allows developers to create their own actions. A custom
+            functionality<br>
+            that can be packaged and reused by content developers.
+
+        </p>
+
+        <p class="question">
+            Question 3: What is the role of the URI in the TLD and the taglib directive?
+        </p>
+        <p>Answer: The URI attribute value resolves to a location the container understands.</p>
+
+        <p class="question">
+            Question 4: What is a tag handler class?
+        </p>
+        <p>Answer: A tag handler class is a class that extends the tag support framework class.</p>
+
+        <p class="question">Question 5: What is the role of attribute setters in a tag handler class?</p>
+        <p>
+            Setters in a tag handler class is to store the value set in jsp page and conforms to the JavaBeans architecture
+            conventions.<br>
+            The Container calls this method to set the value from the tag attribute. It uses JavaBean property naming
+            conventions to<br>
+            figure out that a attribute should be sent to the setter method.
+
+        </p>
+
+        <p class="question">Question 6: What is the role of the doTag() method in a tag handler class?</p>
+        <p>
+            Answer : The heart of a simple tag handler is a single method, doTag, which is invoked when the end element of the
+            tag is
+            encountered.<br>
+            The Container calls doTag() when the JSP invokes the tag using the name declared in the TLD.
+
+        </p>
+
+        <p class="question">Question 7: What does the operation getJspContext().getOut().write("Hi Bob") do when called in a doTag() method?</p>
+        <p>Answer : "hi Bob" as String is displayed.</p>
+
+        <p class="question"> Question 8: What does the operation getJspBody().invoke(null) do when called in a doTag() method? </p>
+        <p>
+        Answer : Process the body of the tag and print it to the response. The null argument means the output goes to the
+        response
+        rather
+        than some OTHER writer you pass in.
+        </p>
+    </div>
+</body>
+</html>
