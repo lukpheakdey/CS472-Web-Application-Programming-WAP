@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://mumstudents.org/cs472/2018-12-BL/Labs/6/decoratemytext.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Text Decorator</title>
+        <link href="./Text Decorator_files/decoratemytext.css" type="text/css" rel="stylesheet">
+        <!-- link to your script file here -->
+        <script src="JS/decoratemytext.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Text Decorator</h1>
+    <div>
+        <img src="./Text Decorator_files/decorated.gif" alt="very decorated!">
+    </div>
+
+    <!-- Your UI controls go here -->
+    <fieldset>
+        <legend> Text </legend>
+        <textarea rows="4" cols="30" id="textarea_id">
+            Sample Item 1
+            Sample Item 2 
+        </textarea>
+    </fieldset>
+    
+    <fieldset>
+        <legend> Decoration </legend>
+        <button onclick="clickBigger();"> Big Decorations </button>
+        <br>
+        <input type="checkbox" id="bling" onchange="onChangeCheck();"> <label for="bling"> Bling </label>
+        <br>
+        <button id="igpayAtinlay" onclick="OnClinckIgpayAtinlay();">
+            Igpay Atinlay
+        </button>
+        <br>
+        <button id="malkovitch" onclick="OnClickMalkovitch();">
+            Malkovitch
+        </button>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* 
+    Created on : Dec 10, 2018, 1:30:37 PM
+    Author     : lukpheakdey
+*/
+
+body {
+    background-color: #CCCCFF;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14pt;
+    position: relative;
+}
+
+#heading {
+    font-size: 32pt;
+    font-weight: bold;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+#mytextarea {
+    width: 90%;
+    display: block;
+    height: 400px;
+    margin: auto;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+#control {
+    padding: 0;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#fixbottom {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#startBtn, #stopBtn, aminationoption, #sizeopt {
+    color: black;
+/*    background-color: #e3e3e3;*/
+    font-weight: bold;
+}
+
+#startBtn:disabled, #stopBtn:disabled, #aminationopt:disabled {
+    color: white;
+/*    background-color: gray;*/
+    font-weight: normal;
+}
+
+fieldset {
+    border: 5px black solid;
+    float: left;
+}
